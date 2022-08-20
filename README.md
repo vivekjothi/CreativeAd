@@ -1,10 +1,10 @@
 # Creative Ad
 
-Created a Simple Mcok API call to list the Employee Details
+Created a Simple Mock API call to list the Employee Details
 
 Once We deploy the Container. We need access via IP to get the Employee List.
 
-http://<ip>:8080/sample/employees 
+http://localhost:8080/sample/employees 
 
 Sample output:
 ~~~~~~~~

@@ -32,6 +32,26 @@ Sample output:
 
 
 3.
+4.
 
+By using pervious Docker image , I have push into the docker repository to use in image delaration on deployment.
+
+Command used to push the docker image:
+~~~
+docker push vivekjothi/employee-producer:latest
+~~~
+
+Then I have deployed the API using the depolyment and Load balancer service.
+Command used to deploy the deployment:
+~~~
+kubectl apply -f employee-deployment.yml
+kubectl expose deployment employee-producer-deployment --port=80 --target-port=8080 -type LoadBalancer
+~~~
+We need to test the result by "curl -v https://<external_ip>/sample/employees"
+
+Also, I have checked that container is not running as root by using below command:
+~~~
+kubectl exec -it employee-producer-deployment-employee-producer -c employee-producer -- id
+~~~
 
 

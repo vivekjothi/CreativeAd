@@ -10,15 +10,17 @@ Not using a Database, But using a Mock Data.
 Created a Dockerfile as "Dockerfile".
 
 Command to build the docker image:
+~~~
 docker image build -t employee-producer .
-
+~~~
 Command to run a image as a container:
+~~~
 docker container run  -p 8080:8080 -d employee-producer
-
+~~~
 Once We deploy the Container. We test the result of api to get the Employee List.
-
+~~~
 http://localhost:8080/sample/employees 
-
+~~~
 
 ![image](https://user-images.githubusercontent.com/12591492/185739525-9b06a287-dbc2-43b1-97af-134c6a22b8b4.png)
 
